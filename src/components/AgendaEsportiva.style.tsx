@@ -6,6 +6,8 @@ export const MatchBox = styled.div `
   font-size: 16px;
   border: 2px solid #858585;
   padding: 16px 24px;
+  cursor: pointer;
+  display: block;
 `;
 
 export const Header = styled.div `
@@ -21,9 +23,24 @@ export const HeaderItem = styled.span `
   margin-bottom: 10px;
 `;
 
+export const MatchPlay = styled.div `
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 14px;
+`;
+
+export const Teams = styled.div `
+  display: flex;
+  align-items: center;
+`;
+
 export const Badge = styled.img `
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
+  vertical-align: baseline;
+  margin-bottom: 5px;
 `;
 
 export const Team = styled.span `
@@ -31,7 +48,9 @@ export const Team = styled.span `
   font-size: 14px;
   font-family: 'opensans', sans-serif;
   font-weight: 600;
-  margin: 0 16px 0 12px;
+  margin-right: 16px;
+  margin-left: 12px;
+  vertical-align: baseline;
 `;
 
 export const PlayInfo = styled.span `
