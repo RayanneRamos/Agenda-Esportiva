@@ -1,26 +1,27 @@
 import React from 'react';
-import { MatchBox, Header, HeaderItem, Badge, Team, PlayInfo } from './AgendaEsportiva.style';
+import { MatchBox, Header, HeaderItem, MatchPlay, Teams, Badge, Team, PlayInfo } from './AgendaEsportiva.style';
+import agenda from '../common/fixtures/agenda';
 
 function AgendaEsportiva() {
   return (
     <MatchBox>
       <Header>
-        <HeaderItem>Futebol</HeaderItem>
-        <HeaderItem>21:30</HeaderItem>
+        <HeaderItem>{agenda.modalidade}</HeaderItem>
+        <HeaderItem>{agenda.hora}</HeaderItem>
       </Header>
-      <div>
+      <MatchPlay>
         <div>
-          <div>
-            <Badge src="" />
-            <Team>Vélez Sarsfield</Team>
-          </div>
-          <div>
-            <Badge src="" />
-            <Team>Flamengo</Team>
-          </div>
+          <Teams>
+            <Badge src={agenda.mandante.urlImagem} />
+            <Team>{agenda.mandante.nome}</Team>
+          </Teams>
+          <Teams>
+            <Badge src={agenda.visitante.urlImagem} />
+            <Team>{agenda.visitante.nome}</Team>
+          </Teams>
         </div>
-      </div>
-      <PlayInfo>Rodada 1</PlayInfo>
+      </MatchPlay>
+      <PlayInfo>{agenda.etapa}</PlayInfo>
     </MatchBox>
   );
 }
