@@ -2,7 +2,8 @@ import { shallow, ShallowWrapper } from 'enzyme';
 import React from 'react';
 import AgendaEsportiva from './AgendaEsportiva';
 import '../setupTests';
-import { MatchBox, Header, HeaderItem, Badge, Team, PlayInfo } from './AgendaEsportiva.style';
+import { MatchBox, Header, HeaderItem, MatchPlay, Teams, Badge, Team, PlayInfo } from './AgendaEsportiva.style';
+import agenda from '../common/fixtures/agenda';
 
 describe('AgendaEsportiva', () => {
   let agendaEsportiva: ShallowWrapper;
@@ -26,6 +27,16 @@ describe('AgendaEsportiva', () => {
       const headerItem = agendaEsportiva.find(HeaderItem);
       expect(headerItem.length).toBe(2);
     });
+
+    it('should contain MatchPlay', () => {
+      const matchPlay = agendaEsportiva.find(MatchPlay);
+      expect(matchPlay.length).toBe(1);
+    });
+    
+    it('should contain Teams', () => {
+      const teams = agendaEsportiva.find(Teams);
+      expect(teams.length).toBe(2);
+    })
 
     it('should contain Badge', () => {
       const badge = agendaEsportiva.find(Badge);
