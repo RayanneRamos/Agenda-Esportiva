@@ -1,5 +1,15 @@
 import styled from 'styled-components';
 
+export const Championship = styled.span `
+  padding-bottom: 16px;
+  color: #515151;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+`;
+
+
 export const MatchBox = styled.div `
   width: 320px;
   height: 120px;
@@ -8,6 +18,7 @@ export const MatchBox = styled.div `
   padding: 16px 24px;
   cursor: pointer;
   display: block;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 `;
 
 export const Header = styled.div `
@@ -36,7 +47,11 @@ export const Teams = styled.div `
   align-items: center;
 `;
 
-export const Badge = styled.img `
+type ImgProps = {
+  src: string
+}
+
+export const Badge = styled.img<ImgProps> `
   width: 24px;
   height: 24px;
   vertical-align: baseline;
@@ -46,7 +61,6 @@ export const Badge = styled.img `
 export const Team = styled.span `
   color: #333333;
   font-size: 14px;
-  font-family: 'opensans', sans-serif;
   font-weight: 600;
   margin-right: 16px;
   margin-left: 12px;
@@ -57,6 +71,5 @@ export const PlayInfo = styled.span `
   display: flex;
   justify-content: flex-start;
   color: #858585;
-  margin-left: 10px;
   margin-top: 10px;
 `;
