@@ -9,6 +9,12 @@ export const Championship = styled.span `
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 `;
 
+export const AgendaWrapper = styled.div `
+  display: flex;
+  padding-left: 1px;
+  padding-top: 1px;
+  float: right;
+`;
 
 export const MatchBox = styled.div `
   width: 320px;
@@ -35,9 +41,6 @@ export const HeaderItem = styled.span `
 `;
 
 export const MatchPlay = styled.div `
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   margin-bottom: 10px;
   font-size: 14px;
 `;
