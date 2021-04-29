@@ -10,10 +10,9 @@ export const Championship = styled.span `
 `;
 
 export const AgendaWrapper = styled.div `
-  display: flex;
   padding-left: 1px;
   padding-top: 1px;
-  float: right;
+  display: inline-block;
 `;
 
 export const MatchBox = styled.div `
@@ -23,7 +22,6 @@ export const MatchBox = styled.div `
   border: 2px solid #858585;
   padding: 16px 24px;
   cursor: pointer;
-  display: block;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 `;
 
