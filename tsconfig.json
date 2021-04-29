@@ -18,8 +18,12 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
+<<<<<<< HEAD
     "noEmit": true,
     "jsx": "react",
+=======
+    "noEmit": true
+>>>>>>> etapa2-agenda-esportiva
   },
   "include": [
     "src"

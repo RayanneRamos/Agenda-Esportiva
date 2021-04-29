@@ -1,16 +1,11 @@
 import React from 'react';
-<<<<<<< HEAD
-
-function App() {
-  return (
-    <h1>Hello World!</h1>
-=======
 import AgendaEsportiva from './components/AgendaEsportiva';
+import championshipEditionMock from './common/fixtures/agenda';
+import { Campeonato } from './common/types/agenda';
 
-function App() {
+const App = () => {
   return (
-    <AgendaEsportiva />
->>>>>>> db3d9e0ac34a35042f11f0b66dafb504f87bda4e
+    <AgendaEsportiva championshipEdition={championshipEditionMock as Campeonato} />
   );
 }
 
