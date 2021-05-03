@@ -71,6 +71,6 @@ export const Team = styled.span `
 export const PlayInfo = styled.span `
   display: flex;
   justify-content: flex-start;
-  color: #858585;
+  color: #858584;
   margin-top: 10px;
 `;
