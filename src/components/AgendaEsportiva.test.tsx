@@ -3,7 +3,7 @@ import React from 'react';
 import AgendaEsportiva from './AgendaEsportiva';
 import '../setupTests';
 import { MatchBox, Header, HeaderItem, AgendaWrapper, MatchPlay, Teams, Badge, Team, PlayInfo } from './AgendaEsportiva.style';
-import { Campeonato } from '../common/types/agenda';
+import { Campeonatos } from '../common/types/agenda';
 import championshipEditionMock from '../common/fixtures/agenda';
 
 describe('AgendaEsportiva', () => {
@@ -11,7 +11,7 @@ describe('AgendaEsportiva', () => {
 
   describe('when component is rendered', () => {
     beforeEach(() => {
-      agendaEsportiva = shallow( <AgendaEsportiva championshipEdition={championshipEditionMock as Campeonato} /> );
+      agendaEsportiva = shallow( <AgendaEsportiva championshipEdition={championshipEditionMock as Campeonatos} /> );
     });
 
     it('should contain MatchBox', () => {
