@@ -135,7 +135,7 @@ export default {
             urlImagem: "https://s.glbimg.com/es/sde/f/organizacoes/2019/01/05/svg-caxias.svg"
           },
           visitante: {
-            nome: "https://s.glbimg.com/es/sde/f/organizacoes/2019/05/13/YpirangaRSSVG.svg",
+            nome: "Ypiranga-RS",
             urlImagem: "https://s.glbimg.com/es/sde/f/organizacoes/2019/05/13/SantoAndreSVG.svg"
           }
         }
