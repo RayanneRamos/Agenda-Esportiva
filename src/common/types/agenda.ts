@@ -1,3 +1,8 @@
+export type Campeonatos = {
+  campeonatos: Array<Campeonato>, 
+  jogos: Array<Jogo>
+}
+
 export type Campeonato = {
   campeonato: string,
   jogos: Array<Jogo>
