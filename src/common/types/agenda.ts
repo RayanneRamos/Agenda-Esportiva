@@ -1,6 +1,5 @@
 export type Campeonatos = {
   campeonatos: Array<Campeonato>, 
-  jogos: Array<Jogo>
 }
 
 export type Campeonato = {
@@ -21,4 +20,8 @@ export type Jogo = {
     nome: string,
     urlImagem: string
   }
+}
+
+export type Agenda = {
+  jogo: Array<Jogo>
 }
