@@ -1,9 +1,11 @@
 import React from 'react';
-import { Championship, AgendaWrapper, MatchBox, Header, HeaderItem, MatchPlay, Teams, Badge, Team, PlayInfo } from './AgendaEsportiva.style';
+import { ChampionshipContent, Championship } from './AgendaEsportiva.style';
 import { Campeonatos, Campeonato, Jogo } from '../common/types/agenda'; 
+import AgendaWrapper from './AgendaWrapper/AgendaWrapper';
 
 type Props = {
   championshipEdition: Campeonatos
+
 }
 
 const AgendaEsportiva: React.FC<Props> = ({ championshipEdition }: Props) => {
@@ -12,33 +14,12 @@ const AgendaEsportiva: React.FC<Props> = ({ championshipEdition }: Props) => {
       {championshipEdition.campeonatos.map((item: Campeonato, key: number) => {
         return (
           <>
-            <div key={`championship-${key}`}>
+            <ChampionshipContent key={`championship-${key}`}>
               <Championship>{item.campeonato}</Championship>
-            </div>
+            </ChampionshipContent>
             {item.jogos.map((item: Jogo, key: number) => {
-              return (
-                <AgendaWrapper key={`agendaWrapper-${key}`}>
-                  <MatchBox>
-                    <Header>
-                      <HeaderItem>{item.modalidade}</HeaderItem>
-                      <HeaderItem>{item.hora}</HeaderItem>
-                    </Header>
-                    <MatchPlay>
-                      <Teams>
-                        <Badge src={item.mandante.urlImagem} />
-                        <Team>{item.mandante.nome}</Team>
-                      </Teams>
-                      <Teams>
-                        <Badge src={item.visitante.urlImagem} />
-                        <Team>{item.visitante.nome}</Team>
-                      </Teams>
-                      <PlayInfo>{item.etapa}</PlayInfo>
-                    </MatchPlay>
-                  </MatchBox>
-              </AgendaWrapper>
-              )
+              return <AgendaWrapper agenda={item} key={`agendaWrapper-${key}`} />
             })}
-            
           </>
         )
       })}
