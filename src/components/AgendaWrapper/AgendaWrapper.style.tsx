@@ -31,6 +31,10 @@ export const MatchPlay = styled.div `
   font-size: 14px;
 `;
 
+export const Link = styled.a `
+  text-decoration: none;
+`;
+
 export const Teams = styled.div `
   display: flex;
   align-items: center;
