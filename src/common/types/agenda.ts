@@ -12,6 +12,7 @@ export type Jogo = {
   etapa: string,
   data: string,
   hora: string,
+  link: string,
   mandante: {
     nome: string,
     urlImagem: string,
