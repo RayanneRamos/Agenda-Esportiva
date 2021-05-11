@@ -1,5 +1,5 @@
 import React from 'react';
-import { AgendaContent, MatchBox, Header, HeaderItem, MatchPlay, Teams, Badge, Team, PlayInfo } from './AgendaWrapper.style';
+import { AgendaContent, MatchBox, Header, HeaderItem, MatchPlay, Link, Teams, Badge, Team, PlayInfo } from './AgendaWrapper.style';
 import { Jogo } from '../../common/types/agenda';
 
 type Props = {
@@ -15,14 +15,16 @@ const AgendaWrapper: React.FC<Props> = ({ agenda }: Props) => {
           <HeaderItem>{agenda.hora}</HeaderItem>
         </Header>
         <MatchPlay>
-          <Teams>
-            <Badge src={agenda.mandante.urlImagem} />
-            <Team>{agenda.mandante.nome}</Team>
-          </Teams>
-          <Teams>
-            <Badge src={agenda.visitante.urlImagem} />
-            <Team>{agenda.visitante.nome}</Team>
-          </Teams>
+          <Link href={agenda.link}>
+            <Teams>
+              <Badge src={agenda.mandante.urlImagem} />
+              <Team>{agenda.mandante.nome}</Team>
+            </Teams>
+            <Teams>
+              <Badge src={agenda.visitante.urlImagem} />
+              <Team>{agenda.visitante.nome}</Team>
+            </Teams>
+          </Link>
           <PlayInfo>{agenda.etapa}</PlayInfo>
         </MatchPlay>        
       </MatchBox>
