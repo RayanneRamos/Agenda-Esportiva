@@ -1,4 +1,6 @@
 export default {
+  nome: "Agenda",
+  link: "http://ge.globo.com/agenda",
   campeonatos: [
     {
       campeonato: "Taça Libertadores",

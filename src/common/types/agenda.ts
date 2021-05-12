@@ -1,3 +1,8 @@
+export type Dados = {
+  nome: string,
+  link: string,
+}
+
 export type Campeonatos = {
   campeonatos: Array<Campeonato>, 
 }
