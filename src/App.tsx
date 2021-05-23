@@ -8,7 +8,7 @@ const App = () => {
   return (
     <AgendaEsportiva 
       championshipEdition={championshipEditionMock as Campeonatos }
-      info={championshipEditionMock as Dados} 
+      info={championshipEditionMock as Dados}
       championship={campeonato as unknown as Campeonato} 
     />
   );
