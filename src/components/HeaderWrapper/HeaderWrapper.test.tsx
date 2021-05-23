@@ -4,6 +4,7 @@ import HeaderWrapper from './HeaderWrapper';
 import { HeaderPrincipal, HeaderTitle, Link, Title } from './HeaderWrapper.style';
 import { Dados } from '../../common/types/agenda';
 import { info } from 'console';
+import '../../setupTests';
 
 describe('HeaderWrapper', () => {
   let headerWrapper: ShallowWrapper;

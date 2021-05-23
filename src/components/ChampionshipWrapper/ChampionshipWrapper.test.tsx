@@ -4,6 +4,7 @@ import ChampionshipWrapper from './ChampionshipWrapper';
 import { ChampionshipContent, Championship } from './ChampionshipWrapper.style';
 import { Campeonato } from '../../common/types/agenda';
 import championshipEditionMock from '../../common/fixtures/agenda';
+import '../../setupTests';
 
 describe('ChampionshipWrapper', () => {
   let championshipWrapper: ShallowWrapper;
