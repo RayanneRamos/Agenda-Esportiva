@@ -1,8 +1,8 @@
 import React from 'react';
-import { HeaderPrincipal, HeaderTitle, Link, Title } from './AgendaEsportiva.style';
 import { Campeonatos, Campeonato, Jogo, Dados } from '../common/types/agenda'; 
 import AgendaWrapper from './AgendaWrapper/AgendaWrapper';
 import ChampionshipWrapper from './ChampionshipWrapper/ChampionshipWrapper';
+import HeaderWrapper from './HeaderWrapper/HeaderWrapper';
 
 type Props = {
   championshipEdition: Campeonatos
@@ -13,13 +13,7 @@ type Props = {
 const AgendaEsportiva: React.FC<Props> = ({ championshipEdition, info }: Props) => {
   return (
     <>
-      <HeaderPrincipal>
-        <HeaderTitle>
-          <Link href={info.link}>
-            <Title>{info.nome}</Title>
-          </Link>
-        </HeaderTitle>
-      </HeaderPrincipal>  
+      <HeaderWrapper info={info} />
       {championshipEdition.campeonatos.map((item: Campeonato, key: number) => {
         return (
           <>
