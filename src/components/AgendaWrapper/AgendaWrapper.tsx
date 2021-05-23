@@ -1,6 +1,6 @@
 import React from 'react';
 import { AgendaContent, MatchBox, Header, HeaderItem, MatchPlay, Link, Teams, Badge, Team, PlayInfo } from './AgendaWrapper.style';
-import { Jogo, Campeonato } from '../../common/types/agenda';
+import { Jogo } from '../../common/types/agenda';
 
 type Props = {
   agenda: Jogo
